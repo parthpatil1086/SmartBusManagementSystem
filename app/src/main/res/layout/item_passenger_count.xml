@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="3dp"
+    app:strokeColor="#E8EEF7"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <!-- Bus Number -->
+
+        <TextView
+            android:id="@+id/txtBusId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BUS001"
+            android:textColor="#1E293B"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <!-- Route Name -->
+
+        <TextView
+            android:id="@+id/txtRouteName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Lonavla to Nigdi"
+            android:textColor="#64748B"
+            android:textSize="14sp"/>
+
+        <!-- Divider -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:background="#EDF2F7"/>
+
+        <!-- Passenger Count Row -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Passenger Count"
+                android:textColor="#64748B"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/txtPassengerCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:textColor="#2563EB"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <!-- Progress Bar -->
+
+        <ProgressBar
+            android:id="@+id/progressOccupancy"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="14dp"
+            android:max="60"
+            android:progress="20"
+            android:progressTint="#2563EB"
+            android:progressBackgroundTint="#E2E8F0"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

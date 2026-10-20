@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF4FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Route Expenses"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1E3A8A"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage route expenses and profit"
+            android:textSize="14sp"
+            android:textColor="#6B7280"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Main Card -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Date -->
+
+                <Button
+                    android:id="@+id/btnSelectDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Date"
+                    android:textAllCaps="false"/>
+
+                <TextView
+                    android:id="@+id/tvSelectedDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="No Date Selected"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E3A8A"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Route"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerRoute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <!-- Bus Number -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bus Number"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:id="@+id/tvBusNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bus Number"
+                    android:textSize="16sp"
+                    android:textColor="#111827"
+                    android:padding="10dp"/>
+
+                <!-- Fuel -->
+
+                <EditText
+                    android:id="@+id/etFuelExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="Fuel Expense"
+                    android:inputType="number"/>
+
+                <!-- Toll -->
+
+                <EditText
+                    android:id="@+id/etTollExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Toll Expense"
+                    android:inputType="number"/>
+
+                <!-- Driver -->
+
+                <EditText
+                    android:id="@+id/etDriverExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Driver Salary"
+                    android:inputType="number"/>
+
+                <!-- Cleaner -->
+
+                <EditText
+                    android:id="@+id/etCleanerExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Cleaner Salary"
+                    android:inputType="number"/>
+
+                <!-- Maintenance -->
+
+                <EditText
+                    android:id="@+id/etMaintenanceExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Maintenance Expense"
+                    android:inputType="number"/>
+
+                <!-- Other -->
+
+                <EditText
+                    android:id="@+id/etOtherExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="Other Expense"
+                    android:inputType="number"/>
+
+                <!-- Calculate -->
+
+                <Button
+                    android:id="@+id/btnCalculate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Calculate Profit"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#2563EB"/>
+
+                <!-- Revenue -->
+
+                <TextView
+                    android:id="@+id/tvRevenue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Revenue : ₹0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"/>
+
+                <!-- Expense -->
+
+                <TextView
+                    android:id="@+id/tvTotalExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Expense : ₹0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+                <!-- Profit -->
+
+                <TextView
+                    android:id="@+id/tvNetProfit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Net Profit : ₹0"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#16A34A"
+                    android:layout_marginTop="10dp"/>
+
+                <!-- Save -->
+
+                <Button
+                    android:id="@+id/btnSaveExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Save Expense"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:backgroundTint="#10B981"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

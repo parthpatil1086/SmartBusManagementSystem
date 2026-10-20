@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF4FF"
+    tools:context=".admindashboard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🚌 SmartBus Admin"
+                android:textColor="#2563EB"
+                android:textStyle="bold"
+                android:textSize="24sp"/>
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#EF4444"/>
+        </LinearLayout>
+
+        <!-- TITLE -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin Dashboard"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:textColor="#1E3A8A"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Passengers - Revenue"
+            android:textSize="18sp"
+            android:textColor="#2563EB"
+            android:layout_marginTop="5dp"/>
+
+        <!-- SUMMARY CARD -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            android:backgroundTint="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dashboard Summary"
+                    android:textStyle="bold"
+                    android:textColor="#1E3A8A"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/tvPassengers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👤 Total Registered Passengers: 0"
+                    android:textSize="18sp"
+                    android:textColor="#111827"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/tvRevenue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💰 Total Revenue: ₹0"
+                    android:textSize="18sp"
+                    android:textColor="#111827"
+                    android:layout_marginTop="12dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- BUTTONS -->
+
+        <Button
+            android:id="@+id/btnViewPassengers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Passengers List"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2563EB"
+            android:layout_marginTop="30dp"/>
+
+        <Button
+            android:id="@+id/btnRegisteredPassengers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registered Passengers"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#3B82F6"
+            android:layout_marginTop="15dp"/>
+
+        <Button
+            android:id="@+id/btnResetSeats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset Seats"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1D4ED8"
+            android:layout_marginTop="15dp"/>
+
+        <Button
+            android:id="@+id/btnProfitPerRoute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Profit Per Route"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#14B8A6"
+            android:layout_marginTop="15dp"/>
+
+        <Button
+            android:id="@+id/btnViewRoute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Routes"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#8B5CF6"
+            android:layout_marginTop="15dp"/>
+
+        <Button
+            android:id="@+id/btnAddRoute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add New Route"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#10B981"
+            android:layout_marginTop="15dp"/>
+
+        <Button
+            android:id="@+id/btnAddExpenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Expenses"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#F59E0B"
+            android:layout_marginTop="15dp"/>
+
+        <Button
+            android:id="@+id/btnViewExpenses"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:text="View Expenses"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+</ScrollView>
